@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-dark mt-5">Login Form</h2>
+            <div class="card my-5">
+                <form class="card-body cardbody-color p-lg-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="text-center">
+                        <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png"
+                            class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px"
+                            alt="profile">
+                    </div>
+                    <!-- <div class="mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" id="inputEmail4">
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div> -->
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="user name"
+                            formControlName="uesrName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.uesrName.errors }" id="inputEmail4">
+                        <div *ngIf="submitted && f.uesrName.errors" class="invalid-feedback">
+                            <div *ngIf="f.uesrName.errors.required">User Name is required</div>
+                            <div *ngIf="f.uesrName.errors.minlength">User Name must be at least 3 charecters</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                            formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                            id="inputPassword4">
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                        <label class="form-check-label" for="rememberPasswordCheck">
+                            Remember password
+                        </label>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-color px-5 mb-5 w-100" type="submit">Sign in</button>
+                        <div class="text-center">
+                            <a class="small" href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
